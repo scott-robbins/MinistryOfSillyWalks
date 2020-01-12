@@ -14,11 +14,11 @@ height = 250
 start = [125, 125]
 n_flags = 250
 '''     EVOLUTION PARAMETERS    '''
-population_size = 2500
+population_size = 250
 initial_energy = 300
 mutation_rate = 0.75
 selection_rate = 0.42
-n_generations = 1250
+n_generations = 750
 fitness_tracker = []
 frame_rate = 30
 target = 10
@@ -156,7 +156,7 @@ if __name__ == '__main__':
         initial_state, flags = create_seed_state(n_flags=n_flags, dims=[width, height])
         world = imutils.create_world([width, height], flags)
         print '[*] Starting Evolutionary Simulation of %d Generations ' % n_generations
-		
+
         population = []  # Create Initial Population
         progress_bar = tqdm(total=n_generations)
         [population.append(Crawler(start, initial_energy)) for crawler in range(population_size)]
